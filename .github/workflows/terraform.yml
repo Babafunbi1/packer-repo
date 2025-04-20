@@ -27,22 +27,22 @@ jobs:
         terraform_version: 1.5.7
 
     - name: Terraform Init
-      working-directory: terraform-packer
+      working-directory: Terraform-Packer
       run: terraform init
 
     - name: Terraform Format Check
-      working-directory: terraform-packer
+      working-directory: Terraform-Packer
       run: terraform fmt -check
 
     - name: Terraform Validate
-      working-directory: terraform-packer
+      working-directory: Terraform-Packer
       run: terraform validate
 
     - name: Terraform Plan
-      working-directory: terraform-packer
+      working-directory: Terraform-Packer
       run: terraform plan -out=tfplan
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-      working-directory: terraform-packer
+      working-directory: Terraform-Packer
       run: terraform apply -auto-approve tfplan
