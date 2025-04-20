@@ -108,7 +108,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
 
   admin_ssh_key {
     username   = "babafunbi1"
-    public_key = file(var.ssh_public_key)
+    public_key = var.ssh_public_key
   }
 
   source_image_id = data.azurerm_image.custom.id
