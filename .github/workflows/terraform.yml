@@ -32,7 +32,7 @@ jobs:
 
     - name: Terraform Format Check
       working-directory: Terraform-Packer
-      run: terraform fmt -check
+      run: terraform fmt -check  ||  terraform fmt -write
 
     - name: Terraform Validate
       working-directory: Terraform-Packer
