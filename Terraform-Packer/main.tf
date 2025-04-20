@@ -117,6 +117,6 @@ resource "azurerm_linux_virtual_machine" "vm" {
     storage_account_type = "Standard_LRS"
     name                 = "osdisk-${count.index}"
   }
-
+ 
   tags     = local.tags
 }
