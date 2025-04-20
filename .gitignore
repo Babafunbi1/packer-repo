@@ -1,0 +1,14 @@
+# Ignore Packer secrets
+packer/packer-variables.json
+
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Ignore local crash logs and logs
+crash.log
+*.log
+
+# System files
+.DS_Store
